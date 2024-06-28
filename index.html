@@ -8,28 +8,54 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <div id="flex-container">
+        <!-- this is the main header -->
 
-    <!-- this is the main header -->
+        <div id="main-header">
+            <div id="title">
+                <h1 id="main-title">
+                    <pre>
++        ===  ===  ========  ====  ===  ===  =======  ===   ===
++       / /  / /  / =====/  /   |  | | / /  / ====/  /  |  / /
++      / /  / /  / /       / /| |  | |/ /  / /      / /|| / /
++     / ===/ /  / =====/  / / | |  | | /  / ====/  / / ||/ /
++    / /  / /  / /       / ==== |  |  /  / /      / /  |  /
++   / /  / /  / =====/  / /   | |  | /  / ====/  / /   | /
++  ===  ===  ========  ===   ====  === =======  ===   ===
 
-    <div id="main-header">
-        <h1 id="main-title">> heaven lost</h1>
-        <h2 id="main-subtitle">> tabletop roleplaying game</h2>
-        <p>><br>> table of contents:</p>
-        <ul id="main-nav-menu">
-            <li><a href="./sub-pages/character-manager.html" target="page-contents-display">> 1. character manager</a></li>
-            <li><a href="./sub-pages/rules.html" target="page-contents-display">> 2. rule compendium</a></li>
-            <li><a href="./sub-pages/game-master-resources.html" target="page-contents-display">> 3. game master resources</a></li>
-            <li><a href="./sub-pages/home.html" target="page-contents-display">> 4. home</a></li>
-        </ul>
++        ===       =======  =======  =======
++       / /       / === /  /=====/  /== ==/
++      / /       / / / /  /          / /
++     / /       / / / /  /=====/    / /
++    / /       / / / /        /    / /
++   /  ====/  / === /  /==== /    / /
++  ========  =======  =======    ====
+
++ ver. alpha 0.0.1
+                    </pre>
+                </h1>
+            </div>
+            <div id="nav-menu">
+                <h3>table of contents:</h3>
+                <ul id="main-nav-menu">
+                    <li><a href="./sub-pages/home.html" target="page-contents-display">> home</a></li>
+                    <li><a href="./sub-pages/rules.html" target="page-contents-display">> rules</a></li>
+                    <li><a href="./sub-pages/character-manager.html" target="page-contents-display">> character manager</a></li>
+                    <!-- <li><a href="./sub-pages/game-master-resources.html" target="page-contents-display">> game master resources</a></li> -->
+                </ul>
+            </div>
+        </div>
+
+
+        <!-- here I display the contents of each page - this may change later, right now I'm just experimenting to see what will work best for me -->
+
+        <div id="page-contents">
+            <iframe id="page-contents-display" name="page-contents-display" src="./sub-pages/home.html" frameborder="0" onload="resizeIframe(this)">
+                <!-- here is where the page content will be displayed -->
+            </iframe>
+        </div>
     </div>
 
-
-    <!-- here I display the contents of each page - this may change later, right now I'm just experimenting to see what will work best for me -->
-
-    <div id="page-contents">
-        <iframe id="page-contents-display" name="page-contents-display" src="./sub-pages/home.html" frameborder="0">
-            <!-- here is where the page content will be displayed -->
-        </iframe>
-    </div>
+    <script src="./scripts/main.js"></script>
 </body>
 </html>
