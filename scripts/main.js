@@ -1,12 +1,19 @@
 'use strict';
 
-// the following code is obsolete but I will keep it here for now
+let navButtons = document.getElementsByClassName("nav-buttons");
+let pageContents = document.getElementsByClassName("page-contents-child");
 
-// need to resize iframes based on the amount of
-// content it has:
+for (let i = 0; i < 3; i++) {
+    let b = document.getElementById("nav-button-" + i);
+    b.addEventListener("click", () => {
+        Array.from(navButtons).forEach((e) => {
+            e.classList.remove("button-active");
+        });
+        b.classList.add("button-active");
 
-// let resizeIframe = (iframe) => {
-//     // iframe.height = iframe.contentWindow.document.body.scrollHeight + "px";
-//     console.log(iframe.contentWindow);
-//     console.log("resized!");
-// }
+        Array.from(pageContents).forEach((e) => {
+            e.classList.remove("contents-active");
+        });
+        Array.from(pageContents)[i].classList.add("contents-active");
+    });
+}

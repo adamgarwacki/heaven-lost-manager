@@ -3,41 +3,61 @@
 
 * {
     background-color: #1f1f22;
-    color: rgb(196, 201, 206);
+    color: #c4c9ce;
 
     font-family: 'Courier New', Courier, monospace;
     font-size: 16px;
     margin: 0px;
 }
 
-a {
-    text-decoration: none;
-}
-
-a:hover {
-    padding-left: 0.5em;
-}
-
-div {
-    border: 1px solid #fff;
-    box-sizing: border-box;
-    padding: 4px;
-}
-
-ul {
-    list-style-type: none; /* Remove bullets */
-    padding: 0; /* Remove padding */
-    margin: 0; /* Remove margins */
+button, input[type="submit"], input[type="reset"] {
+	background: none;
+	color: inherit;
+	border: none;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
 }
 
 /* main header */
 /* ------------------------------------------------- */
 
+
 /* #main-header {
 } */
 
+#title {
+    padding: 0.5em;
+}
+
 #main-title > pre {
     font-size: 0.5em;
+}
+
+#home-navigation {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+}
+
+.nav-button {
+    flex: 1;
+}
+
+.nav-buttons {
+    box-sizing: border-box;    
+    width: 100%;
+    height: 3em;
+
+    border: none;
+    border-bottom: 1px solid #c4c9ce;
+}
+
+.button-active {
+    border: 1px solid #c4c9ce;
+    border-bottom: 1px solid #1f1f22;
 }
 
 
@@ -47,11 +67,22 @@ ul {
 /* #page-contents {
 } */
 
-#page-contents-display {
-    width: 100%;
-    height: 300px;
+.page-contents-child {
+    display: none;
+    padding: 0.5em;
 }
 
+.page-contents-child > h2 {
+    margin-bottom: 0.2em;
+}
+
+.page-contents-child > p {
+    margin-bottom: 1em;
+}
+
+.contents-active {
+    display: block;
+}
 
 /* responsive layout here */
 /* ------------------------------------------------- */
