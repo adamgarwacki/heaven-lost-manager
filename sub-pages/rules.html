@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1">
     <title>heaven lost - rules</title>
 
     <link rel="stylesheet" href="../style.css">
@@ -36,18 +36,154 @@
             </div>
             <div id="home-navigation">
                 <div class="nav-button">
-                    <button id="nav-button-0" class="nav-buttons button-active">HOME</button>
-                </div>
-                <div class="nav-button">
-                    <button id="nav-button-1" class="nav-buttons">CHARACTER<br>MANAGER</button>
-                </div>
-                <div class="nav-button">
-                    <button id="nav-button-2" class="nav-buttons">RESOURCES</button>
+                    <button id="nav-button-0" class="nav-buttons button-active" onclick="window.location.href='../index.html'">RETURN HOME</button>
                 </div>
             </div>
 
     <div id="page-contents">
-        <p>> here is some default text</p>
+        <div id="page-navigation" class="rules-page-navigation">
+            <a href="#rules-preparation">PREPARATION</a>
+            <a href="#rules-pc">PLAYER CHARACTER</a>
+            <a href="#rules-attributes">ATTRIBUTES</a>
+            <a href="#rules-traits">TRAITS</a>
+            <a href="#rules-skills">SKILLS</a>
+            <a href="#rules-combat">COMBAT</a>
+            <a href="#rules-equipment">EQUIPMENT & SERVICES</a>
+        </div>
+
+        <h2 id="rules-preparation">PREPARATION</h2>
+        <p>
+            Each player needs dice (d4, d6, d8, d10, 12, d20), way to note things down; one of the player is the Game Master (GM) who describes the World.
+        </p>
+
+        <h2 id="rules-pc">PLAYER CHARACTER</h2>
+        <p>
+            Player Character (PC) has a Level (LVL); character gains 1 LVL when they manage to Survive; when gaining LVL, can choose to pick one new Skill or pass; character starts at LVL 0 with no Skills.
+        </p>
+        <p>
+            Maximum 5 VITALITY (VIT); when 2 VIT are missing enter Crisis; when 4 VIT are missing the character faints; when all VIT is gone the character dies; all VIT is restored when resting at a Safe Place.
+        </p>
+        <p>
+            Armor Rating (AR) is equal 0; can be increased by equipping armor.
+        </p>
+        <p>
+            Focus Points (FP) can be spent on rolling the dice again (1 FP for one die), adding or subtracting from the result (by 1 for 1 FP), reducing received damage (1 FP for each point of damage) or activating Abilities; all FP are restored when resting at a Safe Place; character at LVL 0 has 3 Max FP, increase by 1 when gaining LVL.
+        </p>
+        <p>
+            When created, a character can have equipment with total value of 100; all unused value is retained in Coins.
+        </p>
+
+        <h2 id="rules-attributes">ATTRIBUTES</h2>
+        <p>
+            Attributes describe the character's limits:</br>
+            # STRENGTH (STR) - physical might</br>
+            # DEXTERITY (DEX) - nimbleness of the character</br>
+            # TOUGHNESS (TGH) - ability to endure</br>
+            # KNOWLEDGE (KNW) - knowledge about the world</br>
+            # WITS (WTS) - resisting fatigue and fear</br>
+            Assign to each one a dice: d12, d10, d8, d6, d4; when making a Check roll that dice; if higher than needed, the Check succeeds
+        </p>
+
+        <h2 id="rules-traits">TRAITS</h2>
+        <p>
+            Create your character's trait; trait should be tied to the character's identity or backstory; when making a Check tied to the PC's trait, roll another die of the same ATR and choose higher number; example traits:</br>
+            # construction worker</br>
+            # marathon runner</br>
+            # programmer</br>
+            # oracle</br>
+            # singer</br>
+            # priest
+        </p>
+
+        <h2 id="rules-skills">SKILLS</h2>
+        <p>
+            Special action or effect for a character; if it has PASSIVE, it's active permanently and reduces Max FP by it's cost; if it has ACTIVE, spend the number of AP to activate it.</br>
+            # Bend Voice (ACTIVE 1FP) - manipulate a sound.</br>
+            # Blade Master (PASSIVE 2FP) - roll the die twice when Attacking using a melee weapon.</br>
+            # Blink (ACTIVE 3FP) - teleport to a close location.</br>
+            # Blood Communion (ACTIVE 1FP) - transfer 1 VIT between two a targets for each FP spent; can raise current VIT above Maximum.</br>
+            # Danger Sense (PASSIVE 1 FP) - feel nearby hostile creatures.</br>
+            # Focused Shot (ACTIVE 3 FP) - ranged attacks gain +1 for this turn; only up to 2 attacks this turn.</br>
+            # Iron Flesh (ACTIVE 3FP) - reduce incoming damage to 1; can be used as a reaction.</br>
+            # Mind Bullet (ACTIVE 1FP) - deal 1 damage to a target; deal 1 more damage for each additional FP spent.</br>
+            # Rage (PASSIVE 1FP) - deal 1 more damage when in Crisis.</br>
+            # Second Chance (PASSIVE 3FP) - receiving fatal damage when above Crisis reduces to 1 VIT instead.</br>
+            # Shield Bash (PASSIVE 0FP) - shields can be used as 1d4 melee.</br>
+            # Summon (ACTIVE 3 FP) - summon a Familiar that can perform simple actions; it has 1 VIT and withers away when resting at a Safe Place.</br>
+            # Survivor (PASSIVE 0 FP) - gain 1FP when entering Crisis for the first time after resting at a Safe Place.</br>
+            # Swift Strike (PASSIVE 2 FP) - melee weapons used with 1H gain 1 more die when Attacking.</br>
+            # Wall of Force (ACTIVE 2 FP) - grant AR+2 to 1 target or AR+1 to 2 targets until your next turn.</br>
+            # Quick Draw (ACTIVE 1 FP) - swap out held items and use them immediately
+        </p>
+
+        <h2 id="rules-combat">COMBAT</h2>
+        <p>
+            Characters on the same side take actions after one another during one turn, then it's the other side's turn; every PC can do 1 action:</br>
+            # Attack - shoot a gun or swing a melee weapon; roll the dice; if above target's AR deal damage = dice result minus target's AR; if PC has a weapon in other hand, they can use it at the same time.</br>
+            # Defend - hide behind cover or guard with a shield; increases AR by 2 until PC's next turn.</br>
+            # Use Ability - use one of the PC's Active Abilities.</br>
+            # Use Item - use one of the PC's items.</br>
+            # Disengage - attempt to flee; roll DEX, WIS or WLP (up to player) against an opponent's DEX, WIS or WLP (up to the GM); if successful, PC escapes Combat.</br>
+            # Interact - PC interacts with the World; usually requires a Check to be made.
+        </p>
+
+        <h2 id="rules-equipment">EQUIPMENT AND SERVICES</h2>
+        <p>
+_________________________________________________________________
+MELEE WPN. NAME		DICE/TURN	VALUE
+| Fist (1H)		| result equal 1| ---
+| Club/Knife (1H)	| d4		| 5
+| Blade (1/2H)		| d8/d10	| 40
+| Bladed Whip (1H)	| d6, d6	| 60
+| Heavy Blade (2H)  	| d12		| 80
+| Polearm (1/2H)	| d6, d6/d8	| 50
+| Heavy Polearm (2H)	| d8, d8	| 70
+| Cross	(2H)		| d12		| 150
+
+_________________________________________________________________
+FIREARM NAME		DICE/TURN	VALUE
+| Pistol (1H)		| d4		|  20
+| Revolver (1H)		| d6		|  50
+| Submachine Gun (2H)	| d4, d4, d4, d4|  60
+| Assault Rifle (2H)	| d6, d6, d6	| 100
+| Machine Gun (2H)	| d6, d6, d6, d6| 200
+| Carbine (2H)		| d8		|  80
+| Sniper Rifle (2H)	| d10		| 150
+| Rocket Launcher (2H)	| d12		| 300
+
+_________________________________________________________________
+ARMOR NAME		EFFECT		VALUE
+| Light Armor (Body)	| AR+1 		| 100
+| Medium Armor (Body)	| AR+2		| 200
+| Heavy Armor (Body)	| AR+3		| 500
+| Tactical Shield (1H)	| AR+1		|  75
+
+_________________________________________________________________
+ITEM NAME		VALUE		EFFECT
+| Antidote		|  20		| removes poison
+| Bandage		|   5		| removes bleeding
+| Batteries		|  30		| 
+| Bullet (Pistol)	|   1		| for Pistol/SMG
+| Bullet (Rifle)	|   2		| for Revolver/AR/Carbine
+| Bullet (L.cal. Rifle)	|   5		| for MG/Sniper Rifle
+| Candle		|   2		| illuminates a small area
+| Coffee		|  10		| gain 1FP (not above Max)
+| Coin			|   1		| holds value for most Humanoids
+| Flashlight		|  30		| illuminates a small area
+| Goggles		|  10		| protect the eyes of the wearer
+| Grenade		|  20		| d10 damage die
+| Inhibitor		|  50		| removes Soul Corrosion
+| Lantern		|   5		| illuminates a small area
+| Notepad		|   5		| 
+| Pen			|   5		| 
+| Ration		|  10		| food that doesn't spoil
+| Rocket		|  40		| for Rocket Launcher
+| Rope			|  10		| 
+| Stimulant		| 100		| raise an ATR by 1 size (up to 12)
+| Screwdriver		| 		| 
+| Wrench		| 		| 
+
+        </p>
     </div>
 </body>
 </html>
